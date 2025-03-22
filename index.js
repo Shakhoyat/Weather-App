@@ -53,7 +53,7 @@ function displayWeatherInfo(weather) {
   const weatherEmoji = document.createElement("p");
 
   cityDisplay.textContent = city;
-  tempDisplay.textContent = `Temperature: ${temp}°C`;
+  tempDisplay.textContent = `Temperature: ${(temp - 273.15).toFixed(2)}°C`;
   humidityDisplay.textContent = `Humidity: ${humidity}%`;
   discriptionDisplay.textContent = description;
   weatherEmoji.textContent = getWeatherEmoji(weather);
@@ -68,7 +68,7 @@ function displayWeatherInfo(weather) {
   card.appendChild(tempDisplay);
   card.appendChild(humidityDisplay);
   card.appendChild(discriptionDisplay);
-  card.appendChild(weatherEmoji);
+  card.appendChild(getWeatherEmoji(weather));
 }
 function getWeatherEmoji(weather) {
   //   const { description } = weather;
