@@ -65,6 +65,10 @@ function displayWeatherInfo(weather) {
   weatherEmoji.classList.add("weatherEmoji");
 
   card.appendChild(cityDisplay);
+  card.appendChild(tempDisplay);
+  card.appendChild(humidityDisplay);
+  card.appendChild(discriptionDisplay);
+  card.appendChild(weatherEmoji);
 }
 function getWeatherEmoji(weather) {
   //   const { description } = weather;
