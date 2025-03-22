@@ -56,3 +56,11 @@ h1{
     font-weight: bold;
     color: #333;
 }
+p{
+    font-size: 1.5rem;
+    color: #333;
+}
+.cityDisplay{
+    font-size: 1.5rem;
+    color: #333;
+}
