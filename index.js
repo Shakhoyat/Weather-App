@@ -14,7 +14,9 @@ weatherForm.addEventListener("submit", async (event) => {
       displayWeatherInfo(weatherData);
     } catch (error) {
       console.log(error);
-      displayError("error");
+      displayError(
+        "An error occurred while fetching the weather data. Please try again."
+      );
     }
   } else {
     displayError("Please enter a city");
@@ -51,6 +53,16 @@ function displayWeatherInfo(weather) {
   const weatherEmoji = document.createElement("p");
 
   cityDisplay.textContent = city;
+  tempDisplay.textContent = `Temperature: ${temp}°C`;
+  humidityDisplay.textContent = `Humidity: ${humidity}%`;
+  discriptionDisplay.textContent = description;
+  weatherEmoji.textContent = getWeatherEmoji(weather);
+
+  cityDisplay.classList.add("cityDisplay");
+  tempDisplay.classList.add("tempDisplay");
+  humidityDisplay.classList.add("humidityDisplay");
+  discriptionDisplay.classList.add("discriptionDisplay");
+  weatherEmoji.classList.add("weatherEmoji");
 
   card.appendChild(cityDisplay);
 }
