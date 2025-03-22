@@ -40,6 +40,19 @@ function displayWeatherInfo(weather) {
     main: { temp, humidity },
     weather: [{ description, id }],
   } = weather;
+
+  card.textContent = "";
+  card.style.display = "flex";
+
+  const cityDisplay = document.createElement("h1");
+  const tempDisplay = document.createElement("p");
+  const humidityDisplay = document.createElement("p");
+  const discriptionDisplay = document.createElement("p");
+  const weatherEmoji = document.createElement("p");
+
+  cityDisplay.textContent = city;
+
+  card.appendChild(cityDisplay);
 }
 function getWeatherEmoji(weather) {
   //   const { description } = weather;
