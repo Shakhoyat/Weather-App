@@ -71,21 +71,20 @@ function displayWeatherInfo(weather) {
   card.appendChild(weatherEmoji);
 }
 function getWeatherEmoji(weatherid) {
-  const { element } = weatherid;
   switch (true) {
-    case element >= 200 && element < 300:
+    case weatherid >= 200 && weatherid < 300:
       return "⛈️";
-    case element >= 300 && element < 400:
+    case weatherid >= 300 && weatherid < 400:
       return "🌧️";
-    case element >= 500 && element < 600:
+    case weatherid >= 500 && weatherid < 600:
       return "🌧️";
-    case element >= 600 && element < 700:
+    case weatherid >= 600 && weatherid < 700:
       return "❄️";
-    case element >= 700 && element < 800:
+    case weatherid >= 700 && weatherid < 800:
       return "🌫️";
-    case element === 800:
+    case weatherid === 800:
       return "☀️";
-    case element > 800 && element < 810:
+    case weatherid > 800 && weatherid < 810:
       return "☁️";
     default:
       return "❓";
