@@ -68,19 +68,28 @@ function displayWeatherInfo(weather) {
   card.appendChild(tempDisplay);
   card.appendChild(humidityDisplay);
   card.appendChild(discriptionDisplay);
-  card.appendChild(getWeatherEmoji(weather));
+  card.appendChild(weatherEmoji);
 }
-function getWeatherEmoji(weather) {
-  //   const { description } = weather;
-  //   if (description.includes("cloud")) {
-  //     return "☁️";
-  //   } else if (description.includes("rain")) {
-  //     return "🌧";
-  //   } else if (description.includes("sun")) {
-  //     return "☀️";
-  //   } else {
-  //     return "🤷";
-  //   }
+function getWeatherEmoji(weatherid) {
+  const { element } = weatherid;
+  switch (true) {
+    case element >= 200 && element < 300:
+      return "⛈️";
+    case element >= 300 && element < 400:
+      return "🌧️";
+    case element >= 500 && element < 600:
+      return ":cloud_with_rain:";
+    case element >= 300 && element < 400:
+      return "❄️";
+    case element >= 300 && element < 400:
+      return "🌫️";
+    case element === 800:
+      return "☀️";
+    case element > 800 && element < 810:
+      return "☁️";
+    default:
+      return "🤷‍♂️:question:";
+  }
 }
 
 function displayError(message) {
