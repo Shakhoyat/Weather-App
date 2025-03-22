@@ -29,20 +29,17 @@ async function getWeather(city) {
     throw new Error("City not found");
   }
   const weatherData = await response.json();
-  console.log(weatherData);
+  //   console.log(weatherData);
   return weatherData;
 }
 
 function displayWeatherInfo(weather) {
-  //   const { main, name, weather } = weather;
-  //   const { temp, humidity } = main;
-  //   const { description } = weather[0];
-  //   card.innerHTML = `
-  //     <h2>${name}</h2>
-  //     <p>${description}</p>
-  //     <p>Temp: ${temp}°C</p>
-  //     <p>Humidity: ${humidity}%</p>
-  //   `;
+  console.log(weather);
+  const {
+    name: city,
+    main: { temp, humidity },
+    weather: [{ description, id }],
+  } = weather;
 }
 function getWeatherEmoji(weather) {
   //   const { description } = weather;
