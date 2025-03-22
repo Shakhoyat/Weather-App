@@ -78,17 +78,17 @@ function getWeatherEmoji(weatherid) {
     case element >= 300 && element < 400:
       return "🌧️";
     case element >= 500 && element < 600:
-      return ":cloud_with_rain:";
-    case element >= 300 && element < 400:
+      return "🌧️";
+    case element >= 600 && element < 700:
       return "❄️";
-    case element >= 300 && element < 400:
+    case element >= 700 && element < 800:
       return "🌫️";
     case element === 800:
-      return ":sunny:";
+      return "☀️";
     case element > 800 && element < 810:
       return "☁️";
     default:
-      return ":question:";
+      return "❓";
   }
 }
 
