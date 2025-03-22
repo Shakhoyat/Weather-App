@@ -12,7 +12,7 @@ This is a simple Weather App built using JavaScript. It allows users to get the 
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/your-username/weather-app.git
+    git clone https://github.com/Shakhoyat/weather-app.git
     ```
 2. Navigate to the project directory:
     ```bash
