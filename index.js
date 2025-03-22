@@ -56,7 +56,7 @@ function displayWeatherInfo(weather) {
   tempDisplay.textContent = `Temperature: ${(temp - 273.15).toFixed(2)}°C`;
   humidityDisplay.textContent = `Humidity: ${humidity}%`;
   discriptionDisplay.textContent = description;
-  weatherEmoji.textContent = getWeatherEmoji(weather);
+  weatherEmoji.textContent = getWeatherEmoji(id);
 
   cityDisplay.classList.add("cityDisplay");
   tempDisplay.classList.add("tempDisplay");
