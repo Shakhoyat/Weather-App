@@ -84,11 +84,11 @@ function getWeatherEmoji(weatherid) {
     case element >= 300 && element < 400:
       return "🌫️";
     case element === 800:
-      return "☀️";
+      return ":sunny:";
     case element > 800 && element < 810:
       return "☁️";
     default:
-      return "🤷‍♂️:question:";
+      return ":question:";
   }
 }
 
