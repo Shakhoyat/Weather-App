@@ -24,10 +24,14 @@ weatherForm.addEventListener("submit", async (event) => {
 async function getWeather(city) {
   const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q= ${city}&appid=${apiKey}`;
   const response = await fetch(apiUrl);
-  console.log(response);
-  //   const data = await response.json();
-  //   return data;
+  //   console.log(response);
+  if (!response.ok) {
+    throw new Error("City not found");
+  }
+  const weatherData = await response.json();
+  return weatherData;
 }
+
 function displayWeatherInfo(weather) {
   //   const { main, name, weather } = weather;
   //   const { temp, humidity } = main;
