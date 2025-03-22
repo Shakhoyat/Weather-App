@@ -1,66 +1,96 @@
-body{
-    font-family: Arial, sans-serif;
-    background-color: lightgreen;
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f4f8;
     margin: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 20px;
 }
-.weatherForm{
+
+.weatherForm {
     margin: 20px;
 }
-.cityInput{
-    padding: 5px;
+
+.cityInput {
+    padding: 10px;
     font-size: 16px;
     font-weight: bold;
-    border:2px solid lightblue;
+    border: 2px solid #87ceeb;
     margin: 10px;
+    border-radius: 5px;
 }
-.weatherInfo{
+
+.weatherInfo {
     margin: 40px;
     padding: 20px;
-    background-color: white;
+    background-color: #ffffff;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-button[type="submit"]{
+
+button[type="submit"] {
     padding: 10px 20px;
     font-size: 16px;
     font-weight: bold;
-    background-color: lightblue;
+    background-color: #87ceeb;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-}
-button[type="submit"]:hover{
-    background-color: rgb(17, 15, 165);
-    cursor: pointer;
-}
-button[type="submit"]:active{
-    background-color: rgb(187, 68, 38);
+    transition: background-color 0.3s ease;
 }
 
-.card{
+button[type="submit"]:hover {
+    background-color: #4682b4;
+}
+
+button[type="submit"]:active {
+    background-color: #1e90ff;
+}
+
+.card {
     margin: 20px;
-    padding: 50px;
-    background: linear-gradient(135deg, #f5f9fa 0%, #d18109 100%);
+    padding: 30px;
+    background: linear-gradient(135deg, #ffffff 40%, #ffeb3b 100%);
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-width: 200px;
+    min-width: 250px;
 }
-h1{
-    font-size: 2rem;
+
+h1 {
+    font-size: 2.5rem;
     font-weight: bold;
     color: #333;
 }
-p{
-    font-size: 1.5rem;
+
+p {
+    font-size: 1.25rem;
+    color: #555;
+}
+
+.cityDisplay, .tempDisplay {
+    font-size: 2.5rem;
     color: #333;
 }
-.cityDisplay{
+
+.humidityDisplay {
     font-size: 1.5rem;
+    color: #555;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.weatherEmoji {
+    font-size: 6rem;
     color: #333;
+}
+
+.errorDisplay {
+    font-size: 1.5rem;
+    color: red;
+    font-weight: bold;
+    font-style: italic;
 }
